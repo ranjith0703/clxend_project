@@ -1,0 +1,37 @@
+services:
+
+  prometheus:
+    image: prom/prometheus
+    container_name: clxend_prometheus
+    ports:
+      - "9090:9090"
+
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+
+
+  cadvisor:
+    image: gcr.io/cadvisor/cadvisor:v0.49.1
+
+    container_name: clxend_cadvisor
+
+    ports:
+      - "8081:8080"
+
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:ro
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+
+
+  grafana:
+    image: grafana/grafana
+
+    container_name: clxend_grafana
+
+    ports:
+      - "3001:3000"
+
+    depends_on:
+      - prometheus

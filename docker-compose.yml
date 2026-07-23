@@ -13,27 +13,34 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
+
   backend:
     build:
       context: .
       dockerfile: backend/Dockerfile
     container_name: wallet_backend
+    restart: always
     ports:
       - "8000:8000"
     depends_on:
       - postgres
     env_file:
       - backend/.env
+    volumes:
+      - ./backend/logs:/app/logs
+
 
   frontend:
     build:
       context: .
       dockerfile: Dockerfile
     container_name: wallet_frontend
+    restart: always
     ports:
       - "3000:3000"
     depends_on:
       - backend
+
 
 volumes:
   postgres_data:

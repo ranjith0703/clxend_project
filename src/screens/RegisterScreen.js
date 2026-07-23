@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import AppLayout from "../components/AppLayout";
 import { useNavigate } from "react-router-dom";
-import { registerUser } from "../services/authService";
+import { registerUser, sendFrontendLog } from "../services/authService";
 import Loader from "../components/Loader";
 import BackgroundWrapper from "../components/BackgroundWrapper";
 import CustomInput from "../components/CustomInput";
@@ -260,8 +260,18 @@ if (!form.govIdNumber) newErrors.govIdNumber = "Required";
 
       const response = await registerUser(form);
 
-      setSuccessMessage(response.message || "Registered successfully!");
-      setErrorMessage("");
+
+// SEND REGISTER LOG
+await sendFrontendLog({
+  action: "REGISTER",
+  name: form.fullName,
+  email: form.email,
+  aadhaar: form.govIdNumber
+});
+
+
+setSuccessMessage(response.message || "Registered successfully!");
+setErrorMessage("");
 
       setForm({
   fullName: "",

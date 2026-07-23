@@ -1,9 +1,9 @@
 import { postRequest } from "./api";
 
+
 // ================= REGISTER =================
 export const registerUser = async (data) => {
   try {
-    // REAL BACKEND API
     const response = await postRequest("/auth/register", data);
 
     return {
@@ -11,10 +11,31 @@ export const registerUser = async (data) => {
       message: response.message || "Registration successful",
       user: response.user,
     };
+
   } catch (error) {
     throw new Error(error.message || "Registration failed");
   }
 };
+
+
+// ================= FRONTEND LOG =================
+export const sendFrontendLog = async (data) => {
+  try {
+
+    const response = await postRequest(
+      "/frontend-log",
+      data
+    );
+
+    return response;
+
+  } catch(error){
+
+    console.log("Frontend log failed:", error.message);
+
+  }
+};
+
 
 // ================= LOGIN =================
 export const loginUser = async ({ email, password }) => {
@@ -28,8 +49,9 @@ export const loginUser = async ({ email, password }) => {
       success: true,
       message: response.message || "Login successful",
       user: response.user,
-      token: response.token,   // ✅ ADD THIS LINE ONLY
+      token: response.token,
     };
+
   } catch (error) {
     throw new Error(error.message || "Invalid credentials");
   }

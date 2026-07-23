@@ -4,7 +4,6 @@ import axios from "axios";
 // FASTAPI BACKEND URL
 // =======================================
 const BASE_URL = "http://localhost:8000";
-
 console.log("BASE URL:", BASE_URL);
 
 // =======================================

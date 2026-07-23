@@ -8,6 +8,7 @@ import CustomInput from "../components/CustomInput";
 import CustomButton from "../components/CustomButton";
 import { signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../firebase";
+import { sendFrontendLog } from "../logger";
 
 export default function LoginScreen() {
   const navigate = useNavigate();
@@ -75,9 +76,30 @@ export default function LoginScreen() {
 
   // ✅ SAVE TOKEN HERE
   localStorage.setItem("token", response.token);
-  localStorage.setItem("userEmail", response.user.email);
 
-  setSuccessMessage(response.message || "Login Successful!");
+  localStorage.setItem(
+    "userEmail",
+    response.user.email
+  );
+
+
+  // ✅ SEND LOGIN LOG TO BACKEND
+  await sendFrontendLog({
+
+    action: "LOGIN",
+
+    name: "",
+
+    email: response.user.email,
+
+    aadhaar: ""
+
+  });
+
+
+  setSuccessMessage(
+    response.message || "Login Successful!"
+  );
 
   setEmail("");
   setPassword("");

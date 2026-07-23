@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: wallet-frontend
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: wallet-frontend
+
+  template:
+    metadata:
+      labels:
+        app: wallet-frontend
+
+    spec:
+      containers:
+      - name: frontend
+        image: wallet-frontend:latest
+
+        imagePullPolicy: Never
+
+        ports:
+        - containerPort: 3000

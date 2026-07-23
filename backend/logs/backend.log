@@ -1,0 +1,45 @@
+2026-07-23 15:07:00,119 | INFO | Wallet backend started
+2026-07-23 15:18:36,482 | INFO | Home API accessed
+2026-07-23 15:18:37,484 | INFO | Home API accessed
+2026-07-23 15:18:37,676 | INFO | Home API accessed
+2026-07-23 15:18:37,848 | INFO | Home API accessed
+2026-07-23 15:18:38,015 | INFO | Home API accessed
+2026-07-23 15:18:38,199 | INFO | Home API accessed
+2026-07-23 15:18:38,378 | INFO | Home API accessed
+2026-07-23 15:18:38,592 | INFO | Home API accessed
+2026-07-23 15:20:02,262 | INFO | Home API accessed
+2026-07-23 15:20:22,846 | INFO | Home API accessed
+2026-07-23 15:20:33,165 | INFO | Home API accessed
+2026-07-23 15:51:50,145 | INFO | Wallet backend started
+2026-07-23 15:52:03,377 | INFO | Login success ranjithkumar2003kpm@gmail.com
+2026-07-23 15:53:40,368 | INFO | New user registered lokesh02@gmail.com
+2026-07-23 15:54:23,005 | WARNING | Login failed Ram
+2026-07-23 15:54:43,661 | WARNING | Login failed Ram
+2026-07-23 15:54:56,618 | INFO | Login success ranjithkumar2003kpm@gmail.com
+2026-07-23 15:58:12,996 | INFO | Home API accessed
+2026-07-23 16:23:34,139 | INFO | Wallet backend started
+2026-07-23 16:24:11,629 | INFO | Login success ranjithkumar2003kpm@gmail.com
+2026-07-23 16:31:36,460 | INFO | Wallet backend started
+2026-07-23 16:40:59,900 | INFO | Wallet backend started
+2026-07-23 16:46:53,562 | INFO | Wallet backend started
+2026-07-23 16:54:04,483 | INFO | Wallet backend started
+2026-07-23 17:09:34,743 | INFO | Wallet backend started
+2026-07-23 17:11:25,890 | INFO | ACTION=REGISTER | NAME=Ranjith | EMAIL=test@gmail.com | AADHAAR=123456789
+2026-07-23 17:13:08,430 | INFO | Login success ranjithkumar2003kpm@gmail.com
+2026-07-23 17:13:08,445 | INFO | ACTION=LOGIN | NAME= | EMAIL=ranjithkumar2003kpm@gmail.com | AADHAAR=
+2026-07-23 17:16:08,311 | INFO | New user registered kala02@gmail.com
+2026-07-23 17:17:29,012 | INFO | New user registered ranjith@test.com
+2026-07-23 17:19:38,018 | INFO | New user registered kamesh20@gmail.com
+2026-07-23 17:20:18,687 | INFO | Login success kamesh20@gmail.com
+2026-07-23 17:20:18,700 | INFO | ACTION=LOGIN | NAME= | EMAIL=kamesh20@gmail.com | AADHAAR=
+2026-07-23 17:36:21,489 | INFO | Wallet backend started
+2026-07-23 17:38:11,222 | INFO | New user registered siva02@gmail.com
+2026-07-23 17:38:11,240 | INFO | ACTION=REGISTER | NAME=siva | EMAIL=siva02@gmail.com | AADHAAR=123456789111
+2026-07-23 17:38:56,472 | INFO | Login success siva02@gmail.com
+2026-07-23 17:38:56,484 | INFO | ACTION=LOGIN | NAME= | EMAIL=siva02@gmail.com | AADHAAR=
+2026-07-23 18:44:22,143 | INFO | Wallet backend started
+2026-07-23 18:46:05,427 | WARNING | Registration failed existing user vicky@gmail.com
+2026-07-23 18:47:36,287 | INFO | Login success ranjithkumar2003kpm@gmail.com
+2026-07-23 18:47:36,298 | INFO | ACTION=LOGIN | NAME= | EMAIL=ranjithkumar2003kpm@gmail.com | AADHAAR=
+2026-07-23 18:49:29,791 | INFO | New user registered vicky02@gmail.com
+2026-07-23 18:49:29,810 | INFO | ACTION=REGISTER | NAME=vicky | EMAIL=vicky02@gmail.com | AADHAAR=123456789111
